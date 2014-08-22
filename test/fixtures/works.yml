@@ -5,12 +5,9 @@
 # below each fixture, per the syntax in the comments below
 #
 <% 20.times do |n| %>
-work_<%= n %>
-datetimeperformed: <%= Time.now - n.days %>
-user: <%= n % 2 == 0 ? 'brianhohe' : 'janedoe' %>
-project: <%= n % 3 == 0 ? 'projectxyz' : 'secondproj' %>
-hours: <%= n*2 %>
-
-
-
+work_<%= n %>:
+  datetimeperformed: <%= Time.now - n.days %>
+  user: <%= n % 2 == 0 ? 'brianhoke' : 'janedoe' %>
+  project: <%= n % 3 == 0 ? 'projectxyz' : 'secondproj' %>
+  hours: <%= n%8 + 1 %>
 <% end %>
