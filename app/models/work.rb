@@ -12,4 +12,10 @@ class Work < ActiveRecord::Base
 
 	scope :fullday, => { where ("hours >= 8")}
 	scope :recent, => {where ( "datetimeperformed > '#{Time.now - 7.days}'")}
+
+	def date_is_in_past
+		if datetimeperformed.present? && datetimeperformed > Time.new
+			errors.add( :datetimeperformed, "cant be in the future")
+		end
+	end
 end
