@@ -1,2 +1,8 @@
 <h1>Work Show</h1>
-<li><%=  @work.project_id %></li>
+<li><%=  @work.datetimeperformed %></li>
+
+<p>User : <%= @work.user.fname %> <%= @work.user.lname %></p>
+
+<p> Project ; <%= @work.project.name %></p>
+
+<p> Hours : <%= @work.hours %></p>
