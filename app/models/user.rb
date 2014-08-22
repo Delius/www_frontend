@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
 	has_many :works
 	has_many :projects, :through => :works
 
+	validates :fname, lenght: { minimum: 2 }
+	validates :lname, lenght: { minimum: 2 }
+	validates :company, presence: true
+	
 end
