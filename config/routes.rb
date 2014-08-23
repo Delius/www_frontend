@@ -20,7 +20,7 @@ resources :works
 
 get 'recentworks/:days' => 'works#index'
 
-get 'timetrackerproject/:slug' => 'project#show'
+get 'timetrackerproject/:slug' => 'projects#show'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
