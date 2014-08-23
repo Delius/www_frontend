@@ -10,7 +10,7 @@ class Work < ActiveRecord::Base
 	
 
 	scope :fullday, -> { where("hours >= 8") }
-	scope :recent, -> {where ( "datetimeperformed > '#{Time.now - 7.days}'") }
+	# scope :recent, -> {where ( "datetimeperformed > '#{Time.now - 7.days}'") }
 
 	def self.recentdays (numdaysago)
 		since_date = Time.now - numdaysago.to_i.days
@@ -18,8 +18,8 @@ class Work < ActiveRecord::Base
 	end
 	
 	def date_is_in_past
-		if datetimeperformed.present? && datetimeperformed > Time.new
-			errors.add( :datetimeperformed, "cant be in the future")
+		if datetimeperformed.present? && datetimeperformed > Time.now
+			errors.add(:datetimeperformed, "can't be in the future")
 		end
 	end
 end
