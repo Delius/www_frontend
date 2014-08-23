@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Timetracker</title>
-	<meta name = "viewport" content = "width=device-width, initial-scale=1"
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -10,7 +10,14 @@
 <body>
 	<div id="container">
 		<header>
-			nav goes here
+			<nav>
+				<ul>
+					<li<%= controller_name == 'companies' ? raw('class="active"') : '' %>><%= link_to 'Cpmpanies', companies_path %></li>
+					<li<%= controller_name == 'projects' ? raw('class="active"') : '' %>><%= link_to 'Projects', projects_path %></li>
+					<li<%= controller_name == 'works' ? raw('class="active"') : '' %>><%= link_to 'Works', works_path %></li>
+					
+				</ul>
+			</nav>
 		</header>
 		<section id="main">
 			<article>
