@@ -1,11 +1,11 @@
 module ApplicationHelper
 
 def nav_items
-
+[
 	{
 		displaytext: 'Companies',
 		controllername: 'companies',
-		linkurl: companies-path
+		linkurl: companies_path
 	},
 	{
 		displaytext: 'Projects',
@@ -17,11 +17,11 @@ def nav_items
 		controllername: 'works',
 		linkurl: works_path
 	}
-
-
+]
+end
 
 
 	def display_nav_item(displaytext, controllername, linkurl)
-		rav("<li#{controllername==controllername ? 'class="acitve"' : ''}>#{link_to displaytext, linkurl}</li>")
+		raw("<li#{controllername==controllername ? 'class="acitve"' : ''}>#{link_to displaytext, linkurl}</li>")
 	end
 end
