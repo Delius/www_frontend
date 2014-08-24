@@ -1,6 +1,8 @@
-$(document).ready(function(){drawPath();});
+$(document).on('ready page:load',function()
+	{drawPath();
+	});
 
-function drawPath(){
+function drawPath(){ 
 	var canvas=document.getElementById("logocanvas");
 	if (canvas.getContext){
 		context = canvas.getContext("2d");
