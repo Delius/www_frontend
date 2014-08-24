@@ -8,5 +8,7 @@ class User < ActiveRecord::Base
 	validates :company, presence: true
 	
 
-	
+		def to_s
+		"#{fname} #{lname}"
+	end
 end

@@ -1,9 +1,16 @@
 <h1>Companies Index </h1>
 
 <p>Here are all the companies </p>
+<table>
+	<tbody>
+		<tr>
+			<th>Company</th>
+		</tr>
 
-<ul>
-	<% @companies.each do |company| %>
-	<li><%= link_to company.name, company %></li>
-	<% end %>
-</ul>
+		<% @companies.each do |company| %>
+		<tr>
+			<td><%= link_to company.name, company %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
