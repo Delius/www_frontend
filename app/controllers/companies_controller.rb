@@ -11,5 +11,5 @@ class CompaniesController < ApplicationController
 			format.json {render json: @company}
 		end
 
-
 	end
+end
