@@ -1,15 +1,21 @@
-<h1>Companes Show</h1>
-<p><%=  @company.name %></p>
+<% if flash[:notice] %>
+<div class="flash notice"><%= flash[:notice] %></div>
+<% end %>
+<h1><%=  @company.name %></h1>
 
+<% if @company.projects.size > 0 %>
 <table>
 	<tr>
 		<th>Project</th>
 		<th>Company</th>
 	</tr>
 
-	<%= render partial: "project/project", collection: @company.projects %>
+	<%= render partial: "projects/project", collection: @company.projects %>
 	</tbody>
 </tbody>
+<% else %>
+<p>No Projects</p>
+<% end %>
 </table>
 
 
