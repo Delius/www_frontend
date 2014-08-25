@@ -12,4 +12,8 @@ class CompaniesController < ApplicationController
 		end
 
 	end
+
+	def new
+		@company = Company.new
+	end
 end
