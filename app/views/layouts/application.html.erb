@@ -14,13 +14,16 @@
 			<nav>
 				<ul>
 					<% nav_items.each do |nav_item| %>
-						<%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
-						<% end %>
+					<%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
+					<% end %>
 				</ul>
 			</nav>
 		</header>
 		<section id="main">
 			<article>
+				<% if flash[:notice] %>
+				<div class="flash notice"><%= flash[:notice] %></div>
+				<% end %>
 				<%= yield %>
 			</article>
 			<aside>
