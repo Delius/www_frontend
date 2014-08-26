@@ -6,7 +6,6 @@ gem 'thin'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,4 +38,19 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do 
+  gem 'sqlite3'
+end
 
+
+group :production do
+  gem 'pg'
+  gem 'carrierwave'
+  gem 'rmagick'
+  gem 'heroku'
+  gem 'git-rails'
+  gem "jquery-rails"
+  gem 'hoe', '~> 1.5.1'
+  gem "RedCloth"
+  gem 'i18n'
+end
