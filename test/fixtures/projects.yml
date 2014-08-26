@@ -11,7 +11,8 @@ projectxyz:
  slug: project-xyz
 
 secondproj:
- name: Second Project
- company: abcltd
- default_rate: 125
- slug: second-project
+  name: Second Proj
+  company: abcltd
+  default_rate: 125
+  slug: second-proj
+  user: brianhoke
