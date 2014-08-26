@@ -1,6 +1,7 @@
-<h1>Works Index </h1>
+<h1>Works</h1>
 
-<p>Here are all the Works </p>
+<p>Here are all of the work items:</p>
+
 <table>
 	<tbody>
 		<tr>
@@ -10,12 +11,10 @@
 			<th>Date/Time</th>
 			<th>Hours</th>
 		</tr>
-
-	<%= render partial: "work", collection: @works %>
-</tbody>
-
+		<%= render partial: "work", collection: @works %>
+	</tbody>
 </table>
 
 <% content_for :aside do %>
-<% render 'sidebar' %>
+	<%= render 'sidebar' %>
 <% end %>
