@@ -19,6 +19,7 @@ class WorksController < ApplicationController
 		@work = Work.new(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours))
 		respond_to do |format|
 			if @work.save
+				Usermailer.workcreated_email(@work).deliver
 				format.html { redirect_to @work, notice: 'Work Created' }
 				format.js { }
 			else
