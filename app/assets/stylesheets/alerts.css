@@ -7,3 +7,6 @@ div.flash {
 div.notice {
 	background-color: #3B8686;
 }
+div.alert {
+	background-color: #990000;
+}
