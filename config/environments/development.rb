@@ -12,7 +12,7 @@ Rails.application.configure do
     :port                 => 143,
     :domain               => 'chronicdiseases.org.uk',
     :user_name            => 'support@chronicdiseases.org.uk',
-    :password             => '22chaberek22',
+    :password             => 'password',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 
