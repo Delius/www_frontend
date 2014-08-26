@@ -6,6 +6,16 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+ config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "imap.1and1.co.uk",
+    :port                 => 143,
+    :domain               => 'chronicdiseases.org.uk',
+    :user_name            => 'support@chronicdiseases.org.uk',
+    :password             => '22chaberek22',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
+
   # Do not eager load code on boot.
   config.eager_load = false
 
