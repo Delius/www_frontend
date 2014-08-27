@@ -8,8 +8,8 @@ Rails.application.configure do
 
  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.1and1.co.uk",
-    :port                 => 143,
+    :address              => "auth.smtp.1and1.co.uk",
+    :port                 => 25,
     :domain               => 'chronicdiseases.org.uk',
     :user_name            => 'support@chronicdiseases.org.uk',
     :password             => 'password',
