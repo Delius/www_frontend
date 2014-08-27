@@ -17,9 +17,13 @@ class WorksController < ApplicationController
 
 	def create
 		@work = Work.new(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours))
-		uploaded_io =params[:doc]
+		if params[:doc]
+			uploaded_io =params[:doc]
 			File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filname), 'wb') do |file|
 				file.write(uploaded_io.read)
+				@work.doc = uploaded_io.original_filname
+			end
+		end
 		respond_to do |format|
 			if @work.save
 				Usermailer.workcreated_email(@work).deliver
@@ -31,6 +35,7 @@ class WorksController < ApplicationController
 			end
 		end
 	end
+
 
 	def edit
 		@work = Work.find(params[:id])
