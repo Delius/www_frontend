@@ -8,5 +8,6 @@ class Usermailer < ActionMailer::Base
 
   def projectupdated_email(project)
   	@project = project
-  	mail(to: work.project.user.email, subject: "Project Updated")
+  	mail(to: project.user.email, subject: "Project Updated")
  end
+end
