@@ -3,11 +3,11 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 brianhoke:
- fname: brian
- lname: hoke
+ fname: Pawel
+ lname: Jakubowski
  company: bentleyhoke
- email: bentley@hoke.com
- encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ email: pawel@bigera.co.uk
+ encrypted_password: <%= User.new.send(:password_digest, 'pawel') %>
 
 janedoe:
  fname: jean

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+ruby '2.1.2'
+gem 'rails_12factor'
 gem 'devise'
 gem 'will_paginate'
 gem 'thin'
@@ -45,12 +46,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'carrierwave'
-  gem 'rmagick'
-  gem 'heroku'
-  gem 'git-rails'
-  gem "jquery-rails"
-  gem 'hoe', '~> 1.5.1'
-  gem "RedCloth"
-  gem 'i18n'
+
 end
