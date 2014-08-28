@@ -1,4 +1,5 @@
 class WorksController < ApplicationController
+
 	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
 
 	def index
@@ -21,10 +22,10 @@ class WorksController < ApplicationController
 		@work = Work.new(params[:work].permit(:project_id, :datetimeperformed, :hours))
 		@work.user = current_user
 		if params[:doc]
-			uploaded_io =params[:doc]
-			File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filname), 'wb') do |file|
+			uploaded_io = params[:doc]
+			File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
 				file.write(uploaded_io.read)
-				@work.doc = uploaded_io.original_filname
+				@work.doc = uploaded_io.original_filename	
 			end
 		end
 		respond_to do |format|
@@ -39,7 +40,6 @@ class WorksController < ApplicationController
 		end
 	end
 
-
 	def edit
 		@work = Work.find(params[:id])
 	end
@@ -47,6 +47,7 @@ class WorksController < ApplicationController
 	def update
 		@work = Work.find(params[:id])
 		@work.user = current_user
+
 		if @work.update(params[:work].permit(:project_id, :datetimeperformed, :hours))
 			flash[:notice] = 'Work Updated'
 			redirect_to @work

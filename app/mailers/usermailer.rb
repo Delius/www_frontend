@@ -1,13 +1,14 @@
 class Usermailer < ActionMailer::Base
   default from: "support@chronicdiseases.org.uk"
 
-  def workcreated_emai(work)
-  	@work = work
-  	mail(to: work.project.user.email, subject: "Work item Posted")
+  def workcreated_email(work)
+    @work = work
+    mail(to: work.project.owner.email, subject: "Work Item Posted")
   end
 
   def projectupdated_email(project)
-  	@project = project
-  	mail(to: project.user.email, subject: "Project Updated")
- end
+    @project = project
+    mail(to: project.owner.email, subject: "Project Updated")
+  end
+  
 end

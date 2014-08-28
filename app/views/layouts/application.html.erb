@@ -22,10 +22,10 @@
 	<section id="main">
 		<article>
 			<% [:notice, :alert].each do |level| %>
-			<% if flash[level] %>
-				<div class="flash <%= level %>"><%= flash[level] %></div>
-			<% end %>
-			<% end %>
+				<% if flash[level] %>
+					<div class="flash <%= level %>"><%= flash[level] %></div>
+				<% end %>
+		    <% end %>
 			<%= yield %>
 		</article>
 		<aside>
@@ -37,9 +37,9 @@
 			<% end %>
 		</aside>
 	</section>
-		<footer>
-			<p> Time Tracker is a <em> BigEra </em> work tracking App </p>
-		</footer>
-	</div>
+	<footer>
+		<p>Time Tracker is a <em>Bigera sample </em>time and project tracking App</p>
+	</footer>
+</div>
 </body>
 </html>

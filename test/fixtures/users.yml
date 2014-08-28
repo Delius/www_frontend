@@ -1,27 +1,29 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
 # This model initially had no columns defined.  If you add columns to the
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
+#
 brianhoke:
- fname: Pawel
- lname: Jakubowski
- company: bentleyhoke
- email: pawel@bigera.co.uk
- encrypted_password: <%= User.new.send(:password_digest, 'pawel') %>
- admin: true
+  fname: Pawel
+  lname: Jakubowski
+  company: bigera
+  email: pawel@bigera.co.uk
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  admin: true
 
 janedoe:
- fname: jean
- lname: doe
- company: bentleyhoke
- email: jean@abc.com
- encrypted_password: <%= User.new.send(:password_digest, 'jean') %>
- admin: false
+  fname: Alex
+  lname: Dubois
+  company: bigera
+  email: alex@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  admin: false
 
 ralphmartinez:
- fname: ralph
- lname: martinez
- company: clientinc
- email: martines@dot.com
- encrypted_password: <%= User.new.send(:password_digest, 'ralph') %>
- admin: false
+  fname: Rafal
+  lname: Mazurek
+  company: clientinc
+  email: rafal@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  admin: true

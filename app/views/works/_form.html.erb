@@ -10,14 +10,10 @@
 <% end %>
 
 <% doajax = false unless (defined? doajax) %>
-<%= form_for(@work, remote: doajax, :html => {:multpart => true }) do |f| %>
+<%= form_for(@work, remote: doajax, :html => { :multipart => true }) do |f| %>
 	<div>
 		<%= f.label :project_id %>
 		<%= f.collection_select(:project_id, Project.all, :id, :name, prompt: true) %>
-	</div>
-	<div>
-		<%= f.label :user_id %>
-		<%= f.collection_select(:user_id, User.all.order('lname, fname'), :id, :to_s, prompt: true) %>
 	</div>
 	<div>
 		<%= f.label :datetimeperformed, 'Date/Time Performed' %>
@@ -28,11 +24,10 @@
 		<%= f.select(:hours, [1,2,3,4,5,6,7,8], prompt: true) %>
 	</div>
 	<% if !doajax %>
-
-	<div>
-		<%= label_tag :doc, 'Notes(optional)' %>
-		<%= file_field_tag :doc %>
-	</div>
+		<div>
+			<%= label_tag :doc, 'Notes (optional)' %>
+			<%= file_field_tag :doc %>
+		</div>
 	<% end %>
 	<div>
 		<%= f.submit @work.new_record? ? "Create Work" : "Update Work"  %>
