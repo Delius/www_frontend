@@ -3,7 +3,7 @@
 <p>Company: <%= @project.company.name %>
 <p>Default Rate: <%= @project.default_rate %></p>
 <p>Slug: <%= @project.slug %></p>
-<p>Owner: <%= @project.owner %></p>
+<p>Owner: <%= @project.user %></p>
 
 <p><%= link_to 'Edit Project', edit_project_path(@project) %></p>
 
@@ -27,4 +27,8 @@
 	</table>
 <% else %>
 	<p>No work items</p>
+<% end %>
+
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
 <% end %>

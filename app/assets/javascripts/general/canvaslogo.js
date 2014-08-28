@@ -21,7 +21,7 @@ function drawPath() {
 		context.fillStyle="#fff";
 		context.font = "small-caps bold 37pt 'Georgia'";
 		context.textAlign = "left";
-		context.fillText("BIG",100,50);
-		context.fillText("Era",100,100);
+		context.fillText("Time",100,50);
+		context.fillText("Tracker",100,100);
 	}
 }

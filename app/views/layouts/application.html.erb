@@ -30,15 +30,11 @@
 		</article>
 		<aside>
 			<%= user_logged_in_msg %>
-			<% if content_for?(:aside) %>
-				<%= yield :aside %>
-			<% else %>
-				<%= sidebar %>
-			<% end %>
+			<%= yield :aside %>
 		</aside>
 	</section>
 	<footer>
-		<p>Time Tracker is a <em>Bigera sample </em>time and project tracking App</p>
+		<p>Time Tracker is a <em>Sample Company</em> App</p>
 	</footer>
 </div>
 </body>

@@ -10,20 +10,15 @@ brianhoke:
   company: bigera
   email: pawel@bigera.co.uk
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-  admin: true
 
 janedoe:
-  fname: Alex
-  lname: Dubois
-  company: bigera
-  email: alex@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-  admin: false
+  fname: Jane
+  lname: Doe
+  company: bgera
+  email: jdoe@example.com
 
 ralphmartinez:
-  fname: Rafal
-  lname: Mazurek
+  fname: Ralph
+  lname: Martinez
   company: clientinc
-  email: rafal@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-  admin: true
+  email: rmartin@example.com

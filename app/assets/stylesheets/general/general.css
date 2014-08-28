@@ -80,10 +80,6 @@ header nav li a:hover, header nav li.active a {
 	color:#fff;
 }
 
-div.pagination {
-	margin-top:20px;
-}
-
 #main {
 	padding:2%;
 	background-color: #fff;

@@ -1,12 +1,9 @@
 class WorksController < ApplicationController
-
-	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
-
 	def index
 		if (params[:days])
-			@works = Work.recentdays(params[:days]).order('datetimeperformed desc').paginate(:page => params[:page])
+			@works = Work.recentdays(params[:days]).order('datetimeperformed desc')
 		else
-			@works = Work.all.order('datetimeperformed desc').paginate(:page => params[:page])
+			@works = Work.all.order('datetimeperformed desc')
 		end
 	end
 
@@ -19,8 +16,7 @@ class WorksController < ApplicationController
 	end
 
 	def create
-		@work = Work.new(params[:work].permit(:project_id, :datetimeperformed, :hours))
-		@work.user = current_user
+		@work = Work.new(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours))
 		if params[:doc]
 			uploaded_io = params[:doc]
 			File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
@@ -46,9 +42,8 @@ class WorksController < ApplicationController
 
 	def update
 		@work = Work.find(params[:id])
-		@work.user = current_user
 
-		if @work.update(params[:work].permit(:project_id, :datetimeperformed, :hours))
+		if @work.update(params[:work].permit(:project_id, :user_id, :datetimeperformed, :hours))
 			flash[:notice] = 'Work Updated'
 			redirect_to @work
 		else

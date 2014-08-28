@@ -15,4 +15,6 @@
 	</tbody>
 </table>
 
-<%= will_paginate @works %>
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>
