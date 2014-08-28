@@ -9,11 +9,11 @@ projectxyz:
   company: fibrotrust
   default_rate: 60
   slug: first-proj
-  owner: pawelj
+  user: pawelj
 
 secondproj:
   name: Second Project
   company: bigera
   default_rate: 125
   slug: second-proj
-  owner: pawelj
+  user: pawelj
