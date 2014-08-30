@@ -1,5 +1,8 @@
 class TechnologiesController < ApplicationController
 def index
-end
+		@technologies = Technology.all
+	end
+
+	
 
 end
