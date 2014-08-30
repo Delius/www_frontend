@@ -1,0 +1,21 @@
+<h1><%= @technology.name %></h1>
+
+<p><%= link_to 'Edit Technology', edit_technology_path(@technology) %></p>
+
+<% if @technology.examples.size > 0 %>
+	<table>
+		<tbody>
+			<tr>
+				<th>Example</th>
+				<th>Technology</th>
+			</tr>
+			<%= render partial: "examples/example", collection: @technology.examples %>
+		</tbody>
+	</table>
+<% else %>
+	<p>No examples yet</p>
+<% end %>
+
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>

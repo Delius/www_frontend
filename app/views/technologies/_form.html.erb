@@ -14,10 +14,12 @@
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 	</div>
+		<div>
+		<%= f.label :description	 %>
+		<%= f.text_field :description %>
+	</div>
 	<div>
 		<%= f.submit @technology.new_record? ? "Create Technology" : "Update Technology"  %>
 	</div>
 <% end %>
 <% end %>
-<% else %>
-you must be signed in
