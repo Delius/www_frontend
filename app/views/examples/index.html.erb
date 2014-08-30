@@ -1,0 +1,15 @@
+<h1>Examples</h1>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Example</th>
+			<th>Technology</th>
+		</tr>
+		<%= render partial: "example", collection: @examples %>
+	</tbody>
+</table>
+
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>
