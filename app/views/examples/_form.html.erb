@@ -1,0 +1,32 @@
+<%= form_for(@example) do |f| %>
+	<% if @example.errors.any? %>
+		<div id="errors">
+			<p>Please correct the following <%= pluralize(@example.errors.count, "error") %>:</p>
+			<ul>
+				<% @example.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+	
+	<div>
+		<%= f.label :technology_id %>
+		<%= f.collection_select(:technology_id, Technology.all, :id, :name, prompt: true) %>
+	</div>
+	<div>
+		<%= f.label :user_id %>
+		<%= f.collection_select(:user_id, User.all, :id, :to_s, prompt: true) %>
+	</div>
+	<div>
+		<%= f.submit @example.new_record? ? "Create Example" : "Update Example"  %>
+	</div>
+<% end %>
