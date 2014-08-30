@@ -3,9 +3,7 @@ class ExamplesController < ApplicationController
 
 	def index
 		@examples = Example.all
-		respond_to do |format|
-			format.html
-		end
+
 	end
 
 	def show
@@ -19,7 +17,7 @@ class ExamplesController < ApplicationController
 	end
 
 	def create
-		@example = Example.new(params[:example].permit(:name, :technology_id)
+		@example = Example.new(params[:example].permit(:name, :technology_id))
 		if @example.save
 			flash[:notice] = 'Example Created'
 			redirect_to @example
@@ -29,7 +27,7 @@ class ExamplesController < ApplicationController
 	end
 
 	def edit
-		@example = Wxample.find(params[:id])
+		@example = Example.find(params[:id])
 	end
 
 	def update
