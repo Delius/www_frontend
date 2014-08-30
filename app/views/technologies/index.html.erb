@@ -1,0 +1,16 @@
+<h1>Technologies we use when providing software development servies</h1>
+
+<p>Here are all of the technologies:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Technology</th>
+		</tr>
+		<%= render partial: "technology", collection: @technologies %>
+	</tbody>
+</table>
+
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>

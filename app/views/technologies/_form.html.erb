@@ -1,0 +1,23 @@
+<% if @technology.errors.any? %>
+	<div id="errors">
+		<p>Please correct the following <%= pluralize(@technology.errors.count, "error") %>:</p>
+		<ul>
+			<% @technology.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+<% if user_signed_in? %>
+<%= form_for(@technology) do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.submit @technology.new_record? ? "Create Technology" : "Update Technology"  %>
+	</div>
+<% end %>
+<% end %>
+<% else %>
+you must be signed in
