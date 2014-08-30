@@ -33,7 +33,7 @@ class ExamplesController < ApplicationController
 	def update
 		@example = Example.find(params[:id])
 
-		if @example.update(params[:example].permit(:name, :technology_id, :www_link))
+		if @example.update(params[:example].permit(:name, :technology_id, :www_link, :description))
 			flash[:notice] = 'Example Updated'
 			redirect_to @example
 		else

@@ -8,6 +8,11 @@
 		<%= link_to @example.www_link, @example.www_link, :target => '_blank' %>
 	</div>
 
+	<div>
+		<p> Example Description </p>
+		<p><%= @example.description %></p>
+	</div>
+
 <p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
 
 
