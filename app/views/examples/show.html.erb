@@ -1,17 +1,20 @@
 <h1><%= @example.name %></h1>
 
-<p>Technology: <%= @example.technology.name %>
+
+	<div>
+		<h3>Description </h3>
+		<p><%= @example.description %></p>
+	</div>
+
+<p><strong>Technology: </strong><%=  @example.technology.name  %>
 
 
 	<div>
 		
-		<%= link_to @example.www_link, @example.www_link, :target => '_blank' %>
+		<strong>Live Link: </strong><%= link_to @example.www_link, @example.www_link, :target => '_blank' %>
 	</div>
 
-	<div>
-		<p> Example Description </p>
-		<p><%= @example.description %></p>
-	</div>
+
 <% if user_signed_in? %>
 	<p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
 <% end %>
