@@ -8,7 +8,10 @@ rubyonrails:
   name: RubyOnRails
 
 javascript:
-  name: javascript
+  name: Javascript
 
 css:
   name: css
+
+html5:
+  name: HTMl5

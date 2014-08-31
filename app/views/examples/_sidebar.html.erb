@@ -1,4 +1,6 @@
 <ul>
 	<li><%= link_to 'All Examples', examples_path %></li>
+	<% if user_signed_in? %>
 	<li><%= link_to 'New Example', new_example_path %></li>
+	<% end %>
 </ul>

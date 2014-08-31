@@ -1,7 +1,7 @@
 <h1><%= @technology.name %></h1>
-
+<% if user_signed_in? %>
 <p><%= link_to 'Edit Technology', edit_technology_path(@technology) %></p>
-
+<% end %>
 <% if @technology.examples.size > 0 %>
 	<table>
 		<tbody>

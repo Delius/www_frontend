@@ -12,9 +12,9 @@
 		<p> Example Description </p>
 		<p><%= @example.description %></p>
 	</div>
-
+<% if user_signed_in? %>
 	<p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
-
+<% end %>
 
 
 	<% content_for :aside do %>
