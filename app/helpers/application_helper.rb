@@ -16,6 +16,16 @@ module ApplicationHelper
 			 displaytext: 'Works',
 			 controllername: 'works',
 			 linkurl: works_path
+			},
+						{
+			 displaytext: 'Examples',
+			 controllername: 'examples',
+			 linkurl: examples_path
+			},
+			{
+			 displaytext: 'Technologies',
+			 controllername: 'technologies',
+			 linkurl: technologies_path
 			}
 		]
 	end
@@ -30,7 +40,7 @@ module ApplicationHelper
 		if user_signed_in?
 			str += "<p id=""user_info"">#{current_user}<br>#{link_to('Logout', destroy_user_session_path, :method => :delete)}</p>"
 		else
-			str += "<p id=""user_info"">#{link_to('Login', new_user_session_path)} | #{link_to('Register', new_user_registration_path)}</p>"
+			str += "<p id=""user_info"">#{link_to('Login', new_user_session_path)} | #{link_to('Register', new_user_registration_path)}</p>" 
 		end
 		str += '</div>'
 		raw(str)

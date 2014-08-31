@@ -13,10 +13,10 @@
 		<p><%= @example.description %></p>
 	</div>
 
-<p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
+	<p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
 
 
 
-<% content_for :aside do %>
+	<% content_for :aside do %>
 	<%= render 'sidebar' %>
-<% end %>
+	<% end %>
