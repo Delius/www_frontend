@@ -3,7 +3,7 @@ class Example < ActiveRecord::Base
 	belongs_to :user
 
 	def to_s
-		"#{name} (#{technology})"
+		"#{name}"
 	end
 
 end
