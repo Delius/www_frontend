@@ -17,7 +17,7 @@ class ExamplesController < ApplicationController
 	end
 
 	def create
-		@example = Example.new(params[:example].permit(:name, :technology_id))
+		@example = Example.new(params[:example].permit(:name, :technology_id ,:www_link, :description))
 		if @example.save
 			flash[:notice] = 'Example Created'
 			redirect_to @example
