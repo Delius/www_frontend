@@ -13,8 +13,13 @@
 		<%= link_to content_tag('canvas', 'Bigera', id: 'logocanvas'), root_url %>
 		<nav>
 			<ul>
+				<% nav2_items.each do |nav_item| %>
+				<%= display_nav2_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
+				<% end %>
+				<% if user_signed_in? %>
 				<% nav_items.each do |nav_item| %>
 					<%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
+				<% end %>
 				<% end %>
 			</ul>
 		</nav>

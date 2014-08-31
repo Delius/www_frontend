@@ -16,7 +16,13 @@ module ApplicationHelper
 			 displaytext: 'Works',
 			 controllername: 'works',
 			 linkurl: works_path
-			},
+			}
+		]
+	end
+
+		def nav2_items
+	  	[
+			
 						{
 			 displaytext: 'Examples',
 			 controllername: 'examples',
@@ -33,6 +39,11 @@ module ApplicationHelper
 	def display_nav_item(displaytext, controllername, linkurl)
 		raw("<li#{controller_name == controllername ? ' class="active"' : ''}>#{link_to displaytext, linkurl}</li>")
 	end
+
+def display_nav2_item(displaytext, controllername, linkurl)
+		raw("<li#{controller_name == controllername ? ' class="active"' : ''}>#{link_to displaytext, linkurl}</li>")
+	end
+
 
 	def user_logged_in_msg
 		str = ''
