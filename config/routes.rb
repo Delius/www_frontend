@@ -5,7 +5,7 @@ Timetracker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'companies#index'
+  root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -15,7 +15,9 @@ Timetracker::Application.routes.draw do
   get 'recentworks/:days' => 'works#index'
 
   get 'timetrackerproject/:slug' => 'projects#show'
-
+  get "pages/home"
+  get "pages/about"
+  get "pages/contact"
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -24,7 +26,7 @@ Timetracker::Application.routes.draw do
   resources :works
   resources :technologies
   resources :examples
-  resources :pages
+  
   # Example resource route with options:
   #   resources :products do
   #     member do
