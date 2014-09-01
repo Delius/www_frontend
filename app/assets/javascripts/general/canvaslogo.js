@@ -18,14 +18,22 @@ function drawPath() {
 		context.lineTo(90,0);
 		context.fill();
 
-		context2 = canvas.getContext("2d");
+		
 		context.fillStyle="#fff";
 		context.font = "small-caps bold 34pt 'Georgia'";
 		context.textAlign = "left";
 		context.fillText("Bigera",100,50);
+
+		context2 = canvas.getContext("2d");
 		context2.fillStyle="#fff";
 		context2.font = "small-caps bold 13pt 'Georgia'";
 		context2.textAlign = "left";
-		context2.fillText("software development services",0,100);
+		context2.fillText("software development services",0,150);
+
+		context3 = canvas.getContext("2d");
+		context3.fillStyle="#fff";
+		context3.font = "small-caps bold 25pt 'Georgia'";
+		context3.textAlign = "left";
+		context3.fillText("bespoke",100,100);
 	}
 }
