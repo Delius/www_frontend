@@ -26,14 +26,14 @@ module ApplicationHelper
 			 displaytext: 'Home',
 			 linkurl: href="http://localhost:3000"
 			},
-						{
-			 displaytext: 'About',
-			 linkurl: href="http://localhost:3000/pages/about"
-			},
-						{
-			 displaytext: 'Contact',
-			 linkurl: href="http://localhost:3000/pages/contact"
-			},
+			# 			{
+			#  displaytext: 'About',
+			#  linkurl: href="http://localhost:3000/pages/about"
+			# },
+			# 			{
+			#  displaytext: 'Contact',
+			#  linkurl: href="http://localhost:3000/pages/contact"
+			# },
 						{
 			 displaytext: 'Examples',
 			 controllername: 'examples',
