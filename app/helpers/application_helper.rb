@@ -24,7 +24,7 @@ module ApplicationHelper
 	  	[
 	  					{
 			 displaytext: 'Home',
-			 linkurl: href="http://localhost:3000"
+			 linkurl: href="http://bigera.co.uk"
 			},
 			# 			{
 			#  displaytext: 'About',
