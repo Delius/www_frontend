@@ -25,6 +25,8 @@ class Example < ActiveRecord::Base
 		end
 	end
 
+	
+
 	def to_s
 		"#{name}"
 	end

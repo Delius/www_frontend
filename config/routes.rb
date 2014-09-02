@@ -18,6 +18,8 @@ Timetracker::Application.routes.draw do
   get "pages/home"
   get "pages/about"
   get "pages/contact"
+
+  get 'tags/:tag', to: 'examples#index', as: :tag
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

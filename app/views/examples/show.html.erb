@@ -16,11 +16,22 @@
 		<div class="panel panel-primary">
 			<p><p><%= @example.description %></p>
 		</div>
-		<%= @example.all_tags %>
+		<p>
+  <strong>Search by Tags:</strong>
+   <% @example.tags.any? %>
+    <% @example.tags.each do |tag| %>
+    <span class="label label-primary"><%= link_to tag.name, tag_path(tag.name) %></span>
+    <% end %>
+</p>
+
+
+
+		
+
 	</div>
 	<ul class="list-group">
 		<div class="well">
-			<strong>Technology: </strong><%=  @example.technology.name  %>
+			<strong>Main Technology: </strong><p><%=  @example.technology.name  %></p>
 		</div>
 
 		<div class="well">

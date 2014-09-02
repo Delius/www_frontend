@@ -4,11 +4,11 @@ class ExamplesController < ApplicationController
 	def index
 
 		if params[:tag]
-			@events = Event.tagged_with(params[:tag])
+			@examples = Example.tagged_with(params[:tag])
 		else
-			@events = Event.all
+			@examples = Example.all
 		end
-
+end
 
 		def show
 
@@ -44,5 +44,7 @@ class ExamplesController < ApplicationController
 				render 'edit'
 			end
 		end
+
+		
 
 	end
