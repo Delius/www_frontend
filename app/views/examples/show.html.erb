@@ -1,7 +1,7 @@
 <h1><%= @example.name %></h1>
 
-
-
+<span class="glyphicon glyphicon-star"></span> 
+<span class="glyphicon glyphicon-star"></span>
 <!-- 
 <div class="panel panel-primary">
 	<h3>Description </h3>
@@ -12,34 +12,34 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><h3>Description </h3></div>
 
-		<div class="panel-body">
-			<div class="panel panel-primary">
-			<p><p><%= simple_format(@example.description) %></p>
+	<div class="panel-body">
+		<div class="panel panel-primary">
+			<p><p><%= @example.description %></p>
 		</div>
+	</div>
+	<ul class="list-group">
+		<div class="well">
+			<strong>Technology: </strong><%=  @example.technology.name  %>
 		</div>
-		<ul class="list-group">
 
-			<li class="list-group-item"><strong>Technology: </strong><%=  @example.technology.name  %></li>
-
-
-			<li class="list-group-item"><strong>Live Link: </strong><%= link_to @example.www_link, @example.www_link, :target => '_blank' %>
-			</li>
-
-
-			<li class="list-group-item"><strong>Code Link: </strong><%= link_to @example.code_link, @example.code_link, :target => '_blank' %>
-			</li>
-
-		</ul>
+		<div class="well">
+			<strong>  Live Link: </strong><%= link_to @example.www_link, @example.www_link, :target => '_blank' %>
+		</div>
+		<div class="well">
+			<strong>Code Link: </strong><%= link_to @example.code_link, @example.code_link, :target => '_blank' %>
+			
+		</div>
+	</ul>
 
 </div>
 
 
 
-		<% if user_signed_in? %>
-		<p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
-		<% end %>
+<% if user_signed_in? %>
+<p><%= link_to 'Edit Example', edit_example_path(@example) %></p>
+<% end %>
 
 
-		<% content_for :aside do %>
-		<%= render 'sidebar' %>
-		<% end %>
+<% content_for :aside do %>
+<%= render 'sidebar' %>
+<% end %>
