@@ -3,7 +3,15 @@
 <p><%= link_to 'Edit Technology', edit_technology_path(@technology) %></p>
 <% end %>
 
+<div class="panel panel-default">
+	<div class="panel-heading"><h3>Description </h3></div>
 
+	<div class="panel-body">
+		<div class="panel panel-primary">
+			<p><p><%= @technology.description %></p>
+		</div>
+	</div>
+</div>
 
 <% if @technology.examples.size > 0 %>
 	<table>

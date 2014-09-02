@@ -17,7 +17,7 @@ def index
 	end
 
 	def create
-		@technology = Technology.new(params[:technology].permit(:name))
+		@technology = Technology.new(params[:technology].permit(:name, :description))
 		if @technology.save
 			flash[:notice] = 'Technology Created'
 			redirect_to @technology
@@ -33,7 +33,7 @@ def index
 	def update
 		@technology = Technology.find(params[:id])
 
-		if @technology.update(params[:technology].permit(:name))
+		if @technology.update(params[:technology].permit(:name, :description))
 			flash[:notice] = 'Technology Updated'
 			redirect_to @technology
 		else
