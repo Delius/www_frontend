@@ -1,4 +1,8 @@
 <tr>
 	<td><%= link_to example, example %></td>
-	
+	<td><% example.tags.any? %>
+    <% example.tags.each do |tag| %>
+    <span class="label label-primary"><%= link_to tag.name, tag_path(tag.name) %></span>
+    <% end %>
+</td>
 </tr>
