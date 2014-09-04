@@ -10,9 +10,11 @@ class ExamplesController < ApplicationController
 		end
 end
 
+
 		def show
 if params[:tag]
 			@example = Example.find(params[:id]).tagged_with(params[:tag])
+		
 		end
 		else
 			@example = Example.find(params[:id])
