@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
 	def home
 		@pages = Page.all
+		
 	end
 
 	def show
@@ -36,9 +37,10 @@ class PagesController < ApplicationController
 			render 'edit'
 		end
 	end
-end
+
 	def about
 	end
 	def contact
 	end
 end
+

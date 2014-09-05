@@ -1,9 +1,9 @@
 class Page < ActiveRecord::Base
 has_many :examples
-has_many :works
+has_many :users
 
 def to_s
-		"#{name}"
+	title
 	end
 
 end
