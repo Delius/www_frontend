@@ -1,6 +1,7 @@
 class Example < ActiveRecord::Base
 	belongs_to :technology
 	belongs_to :user
+	belongs_to :page
 
 	has_many :taggings
 	has_many :tags, through: :taggings
