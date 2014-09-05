@@ -7,7 +7,10 @@
 		<tr>
 			<th>Page</th>
 		</tr>
-		<%= render partial: "examples/example" %>
+		<%= render partial: "page", collection: @pages %>
 			</tbody>
 </table>
 
+<% content_for :aside do %>
+	<%= render 'sidebar' %>
+<% end %>
