@@ -3,7 +3,7 @@ has_many :examples
 has_many :users
 
 def to_s
-	title
+	"#{title}"
 	end
 
 end
