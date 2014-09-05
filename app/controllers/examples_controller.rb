@@ -25,7 +25,7 @@ if params[:tag]
 		end
 
 		def create
-			@example = Example.new(params[:example].permit(:name, :technology_id ,:code_link,:www_link, :description, :all_tags))
+			@example = Example.new(params[:example].permit(:name, :page_id,:technology_id ,:code_link,:www_link, :description, :all_tags))
 			if @example.save
 				flash[:notice] = 'Example Created'
 				redirect_to @example
@@ -41,7 +41,7 @@ if params[:tag]
 		def update
 			@example = Example.find(params[:id])
 
-			if @example.update(params[:example].permit(:name, :technology_id,:code_link, :www_link, :description,:all_tags))
+			if @example.update(params[:example].permit(:name, :page_id,:technology_id,:code_link, :www_link, :description,:all_tags))
 				flash[:notice] = 'Example Updated'
 				redirect_to @example
 			else

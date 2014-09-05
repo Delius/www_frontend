@@ -37,7 +37,10 @@ tag by a comma" %><br />
 		<%= f.label :technology_id %>
 		<%= f.collection_select(:technology_id, Technology.all, :id, :name, prompt: true) %>
 	</div>
-
+	<div>
+		<%= f.label :page_id %>
+		<%= f.collection_select(:page_id, Page.all, :id, :title, prompt: true) %>
+	</div>
 	<div>
 		<%= f.submit @example.new_record? ? "Create Example" : "Update Example"  %>
 	</div>
