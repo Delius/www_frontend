@@ -5,8 +5,12 @@ class Example < ActiveRecord::Base
 
 	has_many :taggings
 	has_many :tags, through: :taggings
+has_attached_file :image, styles: {
 
+	example: "100x100>"
+}
 
+validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 	def self.tagged_with(name)
 		Tag.find_by_name!(name).examples
 	end

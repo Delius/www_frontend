@@ -14,8 +14,13 @@
 
 	<div class="panel-body">
 		<div class="panel panel-primary">
+			<%= link_to image_tag(@example.image.url(:example)) , @example.image.url %><
 			<p><p><%= @example.description %></p>
 		</div>
+
+
+
+
 		<p>
   <strong>Search by Tags:</strong>
    <% @example.tags.any? %>
