@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
 	validates :fname, length: { minimum: 2 }
 	validates :lname, length: { minimum: 5 }
-	validates :company, presence: true
+	# validates :company, presence: true
 
 	def to_s
 		"#{fname} #{lname}"
